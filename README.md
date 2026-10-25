@@ -4,8 +4,15 @@ A simple RAG app in rust. For educational purpose.
 
 ## Premises
 
-- Written in rust.
+### Data flow
+
 - Data source: local text, MD files.
+
+### General
+
+- Written in rust.
+- async
+- config from env
 
 ## Libraries
 
