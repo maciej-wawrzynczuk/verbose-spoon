@@ -22,8 +22,10 @@ A simple RAG app in rust. For educational purpose.
 
 Input: a local directory with text files  
 Output: collection of structs containing the file content and metadata.
+How:
 
-How: the `walkdir` crate. Read with tokio::fs.
+- Synchronously create list of files. Witch `walkdir`.
+- Read with `tokio::fs`
 
 #### Chunking
 
