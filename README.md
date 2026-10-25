@@ -24,8 +24,10 @@ A simple RAG app in rust. For educational purpose.
 
 - text_splitter
 
-### General
+### General libraries
 
 - tokio
 - color_eyre for top level error handling
 - thiserror for reusable code
+- figment
+- serde
