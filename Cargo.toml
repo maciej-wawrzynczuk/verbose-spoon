@@ -7,4 +7,5 @@ edition = "2024"
 color-eyre = "0.6.5"
 figment = { version = "0.10.19", features = ["env"] }
 serde = { version = "1.0.229", features = ["derive"] }
+tokio = { version = "1.54.1", features = ["fs", "macros", "rt-multi-thread"] }
 walkdir = "2.5.0"

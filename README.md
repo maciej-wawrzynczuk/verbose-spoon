@@ -10,8 +10,8 @@ A simple RAG app in rust. For educational purpose.
 
 ### General
 
-- Written in rust.
-- async
+- written in rust
+- async. Adopt tokio early
 - config from env
 
 ## Workflow
@@ -26,10 +26,11 @@ How:
 
 - Synchronously create list of files. Witch `walkdir`.
 - Read with `tokio::fs`
+- I want to keep it generic. Other storage methods possible. Use URIs.
 
 #### Chunking
 
-TBD
+text-splitter
 
 #### Embedding
 

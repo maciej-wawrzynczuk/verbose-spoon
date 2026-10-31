@@ -1,15 +1,16 @@
+mod data;
 mod ingest;
-use crate::ingest::files;
+use crate::ingest::{files, read_file};
 use std::path::Path;
 
-fn main() -> color_eyre::Result<()> {
+#[tokio::main]
+async fn main() -> color_eyre::Result<()> {
     color_eyre::install()?;
     let c: Config = Default::default();
-
     let files = files(Path::new(&c.local_doc_base));
-
     for e in files {
-        println!("{}", e.display());
+        let doc = read_file(&e).await?;
+        println!("{} -> {}", doc.file_location.display(), doc.content);
     }
     Ok(())
 }
